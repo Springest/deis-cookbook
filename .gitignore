@@ -11,3 +11,5 @@
 *.sublime-workspace
 
 metadata.json
+
+tmp/
