@@ -52,3 +52,17 @@ default['rsyslog']['port'] = 514
 default['rsyslog']['server_search'] = 'run_list:recipe\[deis\:\:controller\]'
 default['rsyslog']['per_host_dir'] = '%HOSTNAME%'
 
+# build
+default.deis.buildpacks = {
+ 'heroku-buildpack-java' => ['https://github.com/heroku/heroku-buildpack-java.git', 'master'],
+ 'heroku-buildpack-ruby' => ['https://github.com/heroku/heroku-buildpack-ruby.git', 'master'],
+ 'heroku-buildpack-python' => ['https://github.com/heroku/heroku-buildpack-python.git', 'master'],
+ 'heroku-buildpack-nodejs' => ['https://github.com/gabrtv/heroku-buildpack-nodejs', 'master'],
+ 'heroku-buildpack-play' => ['https://github.com/heroku/heroku-buildpack-play.git', 'master'],
+ 'heroku-buildpack-php' => ['https://github.com/CHH/heroku-buildpack-php.git', 'master'],
+ 'heroku-buildpack-clojure' => ['https://github.com/heroku/heroku-buildpack-clojure.git', 'master'],
+ 'heroku-buildpack-go' => ['https://github.com/kr/heroku-buildpack-go.git', 'master'],
+ 'heroku-buildpack-scala' => ['https://github.com/heroku/heroku-buildpack-scala', 'master'],
+ 'heroku-buildpack-dart' => ['https://github.com/igrigorik/heroku-buildpack-dart.git', 'master'],
+ 'heroku-buildpack-perl' => ['https://github.com/miyagawa/heroku-buildpack-perl.git', 'carton'],
+}
