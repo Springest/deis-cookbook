@@ -54,6 +54,10 @@ if node.deis.dev.mode == true
   end
 end
 
+# install ntp client through ntp
+node.set['ntp']['servers'] = %w(0.nl.pool.ntp.org 1.nl.pool.ntp.org 2.nl.pool.ntp.org 3.nl.pool.ntp.org) unless node['ntp']['servers']
+include_recipe 'ntp'
+
 # install required packages
 package 'fail2ban'
 package 'git'

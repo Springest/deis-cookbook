@@ -8,5 +8,6 @@ version          '0.7.0'
 
 depends          'apt',       '~> 2.3'
 depends          'docker',    '~> 0.32'
+depends          'ntpd',      '~> 1.6'
 depends          'sudo',      '~> 2.5'
 depends          'rsyslog',   '~> 1.12'
